@@ -1,0 +1,330 @@
+
+$primary-color: #D4AF37; // Gold-like color
+$secondary-color: #333333; // Dark gray
+$tertiary-color: #800020; // Maroon
+$black-color: #000000;
+$white-color: white;
+$font-stack: 'Times New Roman', Times, serif;
+$default-padding: 15px;
+$default-margin: 20px;
+$border-style: 2px solid $black-color;
+
+
+@mixin center-text {
+    text-align: center;
+}
+
+@mixin button-style($bg-color, $border-color, $padding, $margin) {
+    cursor: pointer;
+    background-color: $bg-color;
+    padding: $padding;
+    margin: $margin;
+    border: 2px solid $border-color;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+.headerindex {
+    background-color: $secondary-color;
+    color: $primary-color;
+    text-align: start;
+    border: $border-style;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: $font-stack;
+
+    h4 {
+        color: $primary-color;
+        @include center-text;
+        margin: 0;
+        padding: $default-padding;
+    }
+
+    h1 {
+        text-transform: uppercase;
+        font-size: 70px;
+        @include center-text;
+    }
+}
+
+
+.mainindex {
+    @include center-text;
+    background-color: $tertiary-color;
+    font-family: $font-stack;
+
+    h1 {
+        padding: $default-margin;
+        border: $border-style;
+        margin: $default-margin;
+        height: 80px;
+        background-color: $secondary-color;
+        color: $primary-color;
+    }
+
+    h2 {
+        color: $primary-color;
+        background-color: $secondary-color;
+        border: $border-style;
+        height: 50px;
+        font-family: $font-stack;
+    }
+
+    video {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+
+.contenido-footer {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    @include center-text;
+    color: $white-color;
+    padding: 0;
+    margin: 0;
+}
+
+.footerindex {
+    margin: $default-margin;
+    border: 0;
+}
+
+.info {
+    text-align: end;
+    padding: 0;
+}
+
+.info2 {
+    text-align: start;
+}
+
+.logofooter {
+    display: flex;
+}
+
+
+.botoncomprar {
+    @include button-style($primary-color, $black-color, 10px, $default-margin);
+    font-size: medium;
+}
+
+.categoria {
+    border: $border-style;
+    font-size: larger;
+    padding: 25px;
+    margin: $default-margin;
+    background-color: $primary-color;
+    list-style: none;
+}
+
+.destacadas1 {
+    display: flex;
+    justify-content: space-evenly;
+    color: $black-color;
+}
+
+
+.headercontacto {
+    background-color: $secondary-color;
+    padding: $default-padding;
+    border: $border-style;
+
+    h1 {
+        @include center-text;
+        color: $primary-color;
+        font-size: 50px;
+        text-transform: uppercase;
+    }
+}
+
+.maincontacto {
+    display: flex;
+    font-size: xx-large;
+    font-style: normal;
+    background-color: $tertiary-color;
+    padding: $default-padding;
+    @include center-text;
+    justify-content: center;
+}
+
+.botonenviar {
+    @include center-text;
+    font-size: 40px;
+    padding: $default-margin;
+    margin: $default-margin;
+    background-color: $primary-color;
+}
+
+.volverinicio {
+    font-size: 20px;
+    text-align: start;
+    background-color: $primary-color;
+}
+
+.encuesta {
+    font-size: 45px;
+}
+
+
+.headernosotros {
+    font-size: 30px;
+    text-transform: uppercase;
+    background-color: $secondary-color;
+    border: $border-style;
+
+    h1 {
+        padding: $default-margin;
+        @include center-text;
+        color: $primary-color;
+    }
+}
+
+.mainnosotros {
+    font-size: 55px;
+    @include center-text;
+    background-color: $tertiary-color;
+    padding: 130px;
+}
+
+
+.mainmasculinas {
+    background-color: $tertiary-color;
+}
+
+.grid-container-masculinas {
+    @include center-text;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 80px;
+}
+
+.grid-item-masculinas {
+    background-color: $black-color;
+    color: $white-color;
+    border: 1.5px solid $primary-color;
+    padding: 40px;
+    margin: 40px;
+
+    img {
+        height: 300px;
+        width: 300px;
+    }
+
+    h6 {
+        padding: $default-margin;
+        color: $primary-color;
+        font-size: 30px;
+    }
+}
+
+.boton-ver-masculinas {
+    background-color: $primary-color;
+    border: 2px solid $tertiary-color;
+    height: 20px;
+    width: 380px;
+    padding: 10px;
+    margin: $default-padding;
+    cursor: pointer;
+}
+
+.carousel-item {
+    padding: 130px;
+    margin: 0;
+}
+
+
+@media (min-width: 320px) {
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 25px;
+    }
+
+    header,
+    main,
+    footer {
+        padding: 25px;
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 600px) {
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+    }
+
+    header,
+    main,
+    footer {
+        padding: 10px;
+        @include center-text;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    header,
+    main,
+    footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px;
+        @include center-text;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.5em;
+    }
+}
