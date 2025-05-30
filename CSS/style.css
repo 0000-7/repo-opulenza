@@ -107,6 +107,13 @@
     padding: 10px;
     margin: 20px;
     border: 2px solid black;
+    transition: background-color 1s width 1s height 1s ease-in-out;
+   }
+
+   .botoncomprar:hover {
+    background-color: red;
+    width: 120px;
+    height: 60px;
    }
 
 .categoria {
@@ -164,6 +171,7 @@ background-color: #D4AF37;
     font-size: 20px;
     text-align: start;
     background-color: #D4AF37;
+    
     
 }
 
@@ -235,8 +243,11 @@ width: 380px;
 padding: 10px;
 margin: 15px;
 cursor:pointer;
+transition: background-color 0,5s ease;
+}
 
-
+.boton-ver-masculinas:hover {
+    background-color: red;
 }
 
 
@@ -244,9 +255,8 @@ cursor:pointer;
 padding: 130px;
 margin: 0px;
 
+
 }
-
-
 
 
 
